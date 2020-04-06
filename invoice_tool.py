@@ -35,9 +35,16 @@ while (start):
     if len(invo) == 0:
         continue
 
-    if(not isValidInput(invo)):
-        print("\n~~ Err ~~ Err ~~ Err ~~\n")
-        continue 
+
+    if(not isValidInput(invo) or not invo.isnumeric()):
+
+        print("\n===   ERR!  非數字!  Not 3 numeric!   ===\n")
+        continue
+        
+    '''
+    多行
+    註解
+    '''
 
     if invo in allinvos:
         printGoal(invo)
